@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MACSTAR | Cyber Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Roboto+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💳</text></svg>">
+</head>
+<body>
+    <!-- Cyber Grid Background -->
+    <div class="cyber-grid"></div>
+    
+    <!-- Glowing Particles -->
+    <div class="particles"></div>
+    
+    <!-- Main Container - Wallet Interface -->
+    <div class="wallet-container">
+        <!-- Wallet Header -->
+        <header class="wallet-header">
+            <div class="header-content">
+                <div class="wallet-brand">
+                    <div class="brand-logo">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h1 class="brand-name">MAC<span class="highlight">STAR</span></h1>
+                    <div class="wallet-chip">
+                        <div class="chip-glow"></div>
+                        <div class="chip-lines"></div>
+                    </div>
+                </div>
+                <div class="wallet-status">
+                    <span class="status-label">DEV MODE</span>
+                    <div class="status-indicator active"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Wallet Navigation -->
+        <nav class="wallet-nav">
+            <div class="nav-cards">
+                <button class="nav-card active" data-tab="profile">
+                    <i class="fas fa-id-card"></i>
+                    <span>Profile</span>
+                </button>
+                <button class="nav-card" data-tab="repos">
+                    <i class="fas fa-folder"></i>
+                    <span>Repositories</span>
+                </button>
+                <button class="nav-card" data-tab="skills">
+                    <i class="fas fa-cogs"></i>
+                    <span>Tech Stack</span>
+                </button>
+                <button class="nav-card" data-tab="projects">
+                    <i class="fas fa-rocket"></i>
+                    <span>Projects</span>
+                </button>
+                <button class="nav-card" data-tab="contact">
+                    <i class="fas fa-wallet"></i>
+                    <span>Connect</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Wallet Content Area -->
+        <main class="wallet-content">
+            <!-- Profile Tab -->
+            <section class="tab-content active" id="profile-tab">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <div class="avatar-glow">
+                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="MACSTAR Avatar">
+                        </div>
+                        <div class="avatar-badge">
+                            <i class="fab fa-github"></i>
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <h2 class="username">@MACSTAR</h2>
+                        <p class="user-title">Full-Stack Cyber Developer</p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <span class="stat-value" data-count="42">0</span>
+                                <span class="stat-label">Repos</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value" data-count="187">0</span>
+                                <span class="stat-label">Commits</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value" data-count="24">0</span>
+                                <span class="stat-label">Stars</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value" data-count="3">0</span>
+                                <span class="stat-label">Years</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="profile-details">
+                    <div class="detail-card">
+                        <h3><i class="fas fa-terminal"></i> About Me</h3>
+                        <p>Cybersecurity enthusiast and full-stack developer crafting robust digital solutions. Passionate about clean code, innovative tech, and pushing boundaries.</p>
+                        <div class="detail-tags">
+                            <span class="tag">Open Source</span>
+                            <span class="tag">Security</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">DevOps</span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <h3><i class="fas fa-sync-alt"></i> Currently Working On</h3>
+                        <ul class="current-projects">
+                            <li>
+                                <i class="fas fa-code-branch"></i>
+                                <span>Blockchain API Integration</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Security Dashboard v2.0</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-robot"></i>
+                                <span>AI Code Assistant</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Repositories Tab -->
+            <section class="tab-content" id="repos-tab">
+                <div class="repos-header">
+                    <h2><i class="fas fa-database"></i> GitHub Repositories</h2>
+                    <div class="repo-search">
+                        <input type="text" placeholder="Search repositories...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                
+                <div class="repos-grid">
+                    <!-- Repos will be loaded via JavaScript -->
+                </div>
+                
+                <div class="repos-footer">
+                    <button class="btn-load-more">
+                        <i class="fas fa-sync"></i>
+                        Load More Repositories
+                    </button>
+                </div>
+            </section>
+
+            <!-- Skills Tab -->
+            <section class="tab-content" id="skills-tab">
+                <div class="skills-header">
+                    <h2><i class="fas fa-layer-group"></i> Tech Stack</h2>
+                    <div class="skills-filter">
+                        <button class="filter-btn active">All</button>
+                        <button class="filter-btn">Frontend</button>
+                        <button class="filter-btn">Backend</button>
+                        <button class="filter-btn">Tools</button>
+                    </div>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3>JavaScript</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 90%"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3>Python</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 85%"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3>React</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 88%"></div>
+                            </div>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3>Node.js</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 92%"></div>
+                            </div>
+                            <span class="skill-percent">92%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3>MongoDB</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 80%"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3>Docker</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 75%"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-certificates">
+                    <h3><i class="fas fa-award"></i> Certifications</h3>
+                    <div class="certs-grid">
+                        <div class="cert-card">
+                            <div class="cert-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="cert-info">
+                                <h4>Cybersecurity Specialist</h4>
+                                <p>CompTIA Security+</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="cert-info">
+                                <h4>AWS Developer</h4>
+                                <p>AWS Certified</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Tab -->
+            <section class="tab-content" id="projects-tab">
+                <div class="projects-header">
+                    <h2><i class="fas fa-project-diagram"></i> Featured Projects</h2>
+                    <div class="projects-filter">
+                        <button class="proj-filter active">All</button>
+                        <button class="proj-filter">Web Apps</button>
+                        <button class="proj-filter">APIs</button>
+                        <button class="proj-filter">Security</button>
+                    </div>
+                </div>
+                
+                <div class="projects-showcase">
+                    <div class="project-card featured">
+                        <div class="project-badge">FEATURED</div>
+                        <div class="project-header">
+                            <h3>CyberWallet API</h3>
+                            <span class="project-status live">LIVE</span>
+                        </div>
+                        <p class="project-desc">Secure blockchain wallet management system with multi-signature support.</p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>MongoDB</span>
+                            <span>JWT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>SecureAuth Middleware</h3>
+                            <span class="project-status dev">DEV</span>
+                        </div>
+                        <p class="project-desc">Authentication middleware with advanced security features and rate limiting.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>OAuth2</span>
+                            <span>Redis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>DevOps Dashboard</h3>
+                            <span class="project-status live">LIVE</span>
+                        </div>
+                        <p class="project-desc">Real-time monitoring dashboard for Docker containers and server metrics.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Docker</span>
+                            <span>Socket.io</span>
+                            <span>Chart.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="projects-more">
+                    <div class="mini-projects">
+                        <h3><i class="fas fa-code"></i> Mini Projects</h3>
+                        <div class="mini-grid">
+                            <div class="mini-card">
+                                <i class="fas fa-key"></i>
+                                <span>Password Generator</span>
+                            </div>
+                            <div class="mini-card">
+                                <i class="fas fa-qrcode"></i>
+                                <span>QR Code API</span>
+                            </div>
+                            <div class="mini-card">
+                                <i class="fas fa-file-code"></i>
+                                <span>Markdown Editor</span>
+                            </div>
+                            <div class="mini-card">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Crypto Tracker</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Tab -->
+            <section class="tab-content" id="contact-tab">
+                <div class="contact-header">
+                    <h2><i class="fas fa-plug"></i> Connect With Me</h2>
+                    <p class="contact-subtitle">Let's collaborate on something amazing</p>
+                </div>
+                
+                <div class="contact-cards">
+                    <div class="contact-card main">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3>GitHub</h3>
+                            <p>Check out my repositories and contributions</p>
+                            <a href="https://github.com/MACSTAR" class="contact-link">
+                                github.com/<span class="highlight">MACSTAR</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-cards-grid">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email</h3>
+                            <p>macstar@dev.com</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <h3>LinkedIn</h3>
+                            <p>MACSTAR Dev</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <h3>Twitter</h3>
+                            <p>@MACSTAR_dev</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-file-code"></i>
+                        
